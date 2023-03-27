@@ -5,6 +5,7 @@
 	height: 100px;
 	overflow: hidden;
 	background: rgb(255, 185, 185);
+	
 }
 .img
 {
@@ -95,8 +96,9 @@ p
 	
 }
 .playlist{
-	margin-bottom: 10px;
-	padding-bottom: 5px;
+
+	display: block;
+	margin: 0 auto;
 
 }
 .like
@@ -116,8 +118,8 @@ p
 
 	font-weight: 100;
 	font-size: 20px;
-    padding: 5%;
-    margin: 2%;
+    padding: 1%;
+    margin: 1%;
 
     display: flex;
     justify-content: center;
@@ -140,7 +142,8 @@ div.gallery {
 	margin: 5px;
 	border: 1px solid #ccc;
 	float: left;
-	width: 180px;
+	width: 190px;
+
   }
   
   div.gallery:hover {
@@ -151,9 +154,16 @@ div.gallery {
   div.gallery img {
 	width: 100%;
 	height: auto;
+
   }
   
   div.desc {
+	padding: 15px;
+	text-align: center;
+  }
+
+  div.Logo
+  {
 	padding: 15px;
 	text-align: center;
   }
