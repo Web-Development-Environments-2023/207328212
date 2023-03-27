@@ -179,9 +179,11 @@
     </like>
     <br/>
     <br/>
+    <button id="LikeButton" onclick="Like()" style="font-size: 20px; font-family:'Segoe UI'">Like</button>
+    <br/>
     <br/>
     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FTzipiShavitOfficial&width=450&layout&action&size&share=true&height=35&appId" 
-    width="85" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    width="210" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
     
   <div class="Logo">
@@ -231,8 +233,58 @@
 <br/>
 <div>
   <h1>
-    Ans
+    Qַַ&A
   </h1>
+<div class="table" dir="rtl">
+  <p dir="rtl">
+    1. הבדלים עיקריים בין web2, web1 ו-web3 הם:
+    <br/>
+    <table border="1">
+      <tr style="text-align: center;">
+        <td><b> הבדל</b></td>
+        <td><b>web1</b></td>
+        <td><b>web2</b></td>
+        <td><b>web3</b></td>
+        
+      </tr>
+      <tr style="text-align: center;">
+        <td><b>תוכן</b></td>
+        <td>פרסום תוכן ללא אינטראקציה בין המשתמש <br> למפרסם התוכן</td>
+        <td>המשתמש יכול לגשת לתוכן של יוצרים אחרים, <br> כגון בלוגים, ויקיפדיה, תקשורת דו צדדית</td>
+        <td>חיבורים של מאגרי מידע, למידה עצמית של המערכת, בינה מלאכותית, <br> כולם מקושרים והאינטרנט לומד לבדו מידע רלוונטי</td>
+      </tr>
+      <tr style="text-align: center;">
+        <td><b>סוג</b></td>
+        <td>קריאה בלבד</td>
+        <td>קריאה וכתיבה</td>
+        <td>קריאה, כתיבה ואינטראקציה נוספת הניתנת להפעלה (פונקציות וכו')</td>
+      </tr>
+      <tr style="text-align: center;">
+        <td><b>מנוע חיפוש</b></td>
+        <td>אחזור תוכן מאקרו, חיפוש מהיר <br> אך לרוב לא מדוייק או לא רלוונטי</td>
+        <td>אחזור תגיות עם תוכן מיקרו, התיוג הוא ידני, <br> וניתן לתייג הכל (תמונה, לינק, אירוע, וידאו וכו')</td>
+        <td>אחזור תגיות עם תוכן מיקרו, תהליך התיוג כאן יהיה אוטומטי. <br> ז"א התוצאת חיפוש תהיה מדוייקת יותר</td>
+      </tr>
+      <tr style="text-align: center;">
+        <td><b>כמות משתמשים</b></td>
+        <td>מיליון משתמשים</td>
+        <td>ביליון משתמשים</td>
+        <td>טריליון משתמשים</td>
+      </tr>
+    </table>
+  </p>
+  <p>
+    2. דוגמה לתרחיש שימוש שתסביר את ההבדלים בטבלה מעלה היא:
+    <br/>
+    <b> "כמה עולה לקנות רכב בישראל?"</b>
+    <br/>
+    לפי הטבלה, בגרסה הראשונה נקבל דפים סטטיים, שיוחזרו עפ"י המידע שניתן דרך המילים של השאילתא עצמה.
+    <br/>
+    בגרסה השניה, נקבל אתרים שבהם המשתמש יוכל להתייעץ על המחיר, לכתוב את דעתו על המחירים, לקרוא תגובות.
+    <br/>
+    בגרסה השלישית, נקבל אתרים שמותאמים למשתמש, לפי היסטוריית החיפושים שלו, אתרים שעונים על השאלה במדוייק.
+  </p>
+</div>
 </div>
 </section>
 
@@ -263,7 +315,7 @@
       <span>:תוכן הדואר</span>
       <textarea id="massage" placeholder="Enter your Message" name="Massage"></textarea>
       <br/>
-      <button onclick="send()" style="font-size: 20px; font-family:'Segoe UI'">Submit</button>
+      <button onclick="send()" style="font-size: 20px; font-family:'Segoe UI'">שלח</button>
       <br/>
       <br/>
     </form>
@@ -273,12 +325,20 @@
 </div>
 </section>
 
+
 <script type="text/javascript">
   function send(){
   var content = tinymce.get("massage").getContent();
   window.open("mailto:galperav@post.bgu.ac.il?subject=Talk with Tzipi&body=" +content.slice(3, -4))
   }
     </script>
+
+<script>
+  const LikeButton = document.getElementById("LikeButton");
+  LikeButton.addEventListener("click", () => {
+    LikeButton.textContent = "Liked!";
+  });
+</script>
 
   <script type="text/javascript">
     tinymce.init({
