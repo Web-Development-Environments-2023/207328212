@@ -7,52 +7,8 @@
 <script src="https://cdn.tiny.cloud/1/r8mv5x18lvutuarskvwglbsjpo1dqe31c1yy5gk2kpk1dqgv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  /* Styles for desktop screens */
-  .container {
-    width: 960px;
-    margin: 0 auto;
-  }
-  
-  /* Styles for tablet screens */
-  @media only screen and (max-width: 768px) {
-    .container {
-      width: 768px;
-    }
-  }
-  
-  /* Styles for mobile screens */
-  @media only screen and (max-width: 480px) {
-    .container {
-      width: 100%;
-      padding: 0 10px;
-    }
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
-  <div class="container">
-
 
 <style>
   body{
@@ -60,15 +16,20 @@
   } </style>
 
 <div id="menu">
-<img class="img" src="pictures\logo.jpg">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
+  <div >
+    <img class ="img" src="pictures\logo.jpg">
+  </div>
+  <ul class="items">
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#photos">My Photos</a></li>
+    <li><a href="#playlist">My Playlist</a></li>
+    <li><a href="#like">Like</a></li>
+    <li><a href="#qrcoder">QR code</a></li>
+    <li><a href="#spa">Q&A</a></li>
+    <li><a href="#contact">Contact Me</a></li>
+  </ul>
 </div>
+
 		  
 <section id="about" class="section">
   <br/>
@@ -100,7 +61,7 @@
 </p>
 </section>
 
-<section id="photos" class="section">
+<section id="photos" class="section" style="height: 850px;">
 <br/>
 <br/>
 <br/>
@@ -170,40 +131,34 @@
     <div class="desc" style= "font-family:tahoma">אני לפני הופעה</div>
   </div>
 </div>
+
+<br/>
+<br/>
 <br/>
 </section>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
-<section id="playlist" class="section">
-  <h1>
-    My Playlist
-  </h1>
-<div class="playlist">
+<section id="playlist" class="section" >
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+<div>
+  <div>
+    <h1>
+      My Playlist
+    </h1>
+  </div>
+<div class="play_list">
   <p dir="rtl">
     בואו תשמעו את השיר האהוב עליי! קצת ישן אבל בטוח יזכיר לכם את הילדות :)
   </p>
  <br/>
   <p>
-    <iframe width="900" height="600" src="https://www.youtube.com/embed/P5OPR-jpzww" title="YouTube video player" 
+    <iframe width="800" height="500" src="https://www.youtube.com/embed/P5OPR-jpzww" title="YouTube video player" 
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
   </iframe>
   </p>
+</div>
 </div>
 </section>
 
@@ -410,12 +365,6 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
-
-
-
-
-</div>
-
 
 
 
