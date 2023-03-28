@@ -8,12 +8,57 @@
 <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Styles for desktop screens */
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Styles for tablet screens */
+  @media only screen and (max-width: 768px) {
+    .container {
+      width: 768px;
+    }
+  }
+  
+  /* Styles for mobile screens */
+  @media only screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
+  <div class="container">
+
+
 <style>
   body{
     background-color:rgba(245, 218, 223, 0.454) ;
   } </style>
+
 <div id="menu">
 <img class="img" src="pictures\logo.jpg">
 <li><a href="#about">About Me</a></li>
@@ -365,5 +410,14 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+
+
+
+
+</div>
+
+
+
+
 </body>
 </html>
