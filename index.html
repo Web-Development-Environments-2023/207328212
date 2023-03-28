@@ -9,7 +9,8 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
-
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" nonce="dJz6acX6"></script>
 <style>
   body{
     background-color:rgba(245, 218, 223, 0.454) ;
@@ -179,14 +180,15 @@
     </like>
     <br/>
     <br/>
-    <button id="LikeButton" onclick="Like()" style="font-size: 20px; font-family:'Segoe UI'">Like</button>
-    <br/>
-    <br/>
-    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FTzipiShavitOfficial&width=450&layout&action&size&share=true&height=35&appId" 
-    width="210" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <div class="Likes">
+      <p style="font-size: 20px; font-family:'Segoe UI';">Likes: <span id="counter">0</span></p>
+      <button id="likeButton" onclick="toggleLike()" style="font-size: 20px; font-family:'Segoe UI';">Like</button> 
 
-    
-  <div class="Logo">
+    <br/>
+    <br/>
+    <div class="fb-like" data-href="https://www.facebook.com/TzipiShavitOfficial" data-width="" data-layout="" data-action="" data-size="" data-share="false"></div>
+  </div>
+    <div class="Logo">
       <a target="_blank" href="https://www.instagram.com/tzipishavitofficial/">
       <img class="sm" src="pictures/inst.jpg" alt="Instagram" style="height:100px;">
       </a>
@@ -220,10 +222,9 @@
 </div>
 <div>
   <p>
-    <img src=pictures\MySite1.jpg width="500" height="500" />
+    <img src=pictures\MySite1.jpg width="400" height="400" />
   </p>
 </div>
-
 </section>
 
 <section id="spa" class="section">
@@ -325,6 +326,20 @@
 </div>
 </section>
 
+<script>
+  var count = 0;
+  function toggleLike() {
+    var button = document.getElementById("likeButton");
+    if (count == 0) {
+      button.innerHTML = "Liked!";
+      count = 1;
+    } else {
+      button.innerHTML = "Like";
+      count = 0;
+    }
+    document.getElementById("counter").innerHTML = count;
+  }
+</script>
 
 <script type="text/javascript">
   function send(){
@@ -332,13 +347,6 @@
   window.open("mailto:galperav@post.bgu.ac.il?subject=Talk with Tzipi&body=" +content.slice(3, -4))
   }
     </script>
-
-<script>
-  const LikeButton = document.getElementById("LikeButton");
-  LikeButton.addEventListener("click", () => {
-    LikeButton.textContent = "Liked!";
-  });
-</script>
 
   <script type="text/javascript">
     tinymce.init({

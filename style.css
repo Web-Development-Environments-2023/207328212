@@ -24,7 +24,6 @@ html,body{
 	width: 115px;
 	height: 105px;	
 	margin-left: 0;
-	/* margin-right: 200px; */
 
 }
 .items{
@@ -107,8 +106,6 @@ p
 	text-align: center;
 	color: #5c5757;
 
-	
-	
 }
 
 .play_list{
@@ -198,4 +195,13 @@ div.gallery {
     align-items: center;
 	flex-direction: column;
 
+  }
+
+div.Likes
+  {
+	text-align: center;
+  }
+  div.fb-like
+  {
+	margin-left: 5%;
   }
